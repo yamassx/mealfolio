@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
-class DeviseCreateReataurants < ActiveRecord::Migration[5.2]
+class DeviseCreateRestaurants < ActiveRecord::Migration[5.2]
   def change
-    create_table :reataurants do |t|
+    create_table :restaurants do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :name, null: false
-      t.text :greeting
 
       ## Recoverable
       t.string   :reset_password_token
@@ -38,9 +36,9 @@ class DeviseCreateReataurants < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
 
-    add_index :reataurants, :email,                unique: true
-    add_index :reataurants, :reset_password_token, unique: true
-    # add_index :reataurants, :confirmation_token,   unique: true
-    # add_index :reataurants, :unlock_token,         unique: true
+    add_index :restaurants, :email,                unique: true
+    add_index :restaurants, :reset_password_token, unique: true
+    # add_index :restaurants, :confirmation_token,   unique: true
+    # add_index :restaurants, :unlock_token,         unique: true
   end
 end

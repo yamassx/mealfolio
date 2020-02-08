@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root "cooks#index"
-  devise_for :reataurants, controllers: {
-    sessions:      'reataurants/sessions',
-    passwords:     'reataurants/passwords',
-    registrations: 'reataurants/registrations'
+  devise_for :restaurants, controllers: {
+    sessions:      'restaurants/sessions',
+    passwords:     'restaurants/passwords',
+    registrations: 'restaurants/registrations'
   }
   devise_for :cooks, controllers: {
     sessions:      'cooks/sessions',
