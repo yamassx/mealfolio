@@ -4,30 +4,30 @@
   .field
     = f.label :nickname
     %br/
-    = f.text_field :nickname, autofocus: true, autocomplete: "料理人太郎"
+    = f.text_field :nickname, class:"form", autofocus: true, autocomplete: "料理人太郎"
   .field
     = f.label :氏
     %br/
-    = f.email_field :first_name, autofocus: true, autocomplete: "料理"
+    = f.text_field :first_name, class:"half_form", autofocus: true, autocomplete: "料理"
   .field
     = f.label :名
     %br/
-    = f.email_field :last_name, autofocus: true, autocomplete: "太郎"
+    = f.text_field :last_name, class:"half_form", autofocus: true, autocomplete: "太郎"
   .field
     = f.label :email
     %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
+    = f.email_field :email, class:"form", autofocus: true, autocomplete: "email"
   .field
     = f.label :password
     - if @minimum_password_length
       %em
         (#{@minimum_password_length} 文字以上)
     %br/
-    = f.password_field :password, autocomplete: "new-password"
+    = f.password_field :password, class:"form", autocomplete: "new-password"
   .field
     = f.label :password確認
     %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
+    = f.password_field :password_confirmation, class:"form", autocomplete: "new-password"
   .actions
-    = f.submit "登録する"
+    = f.submit "登録する", class: "submit_btn"
 -# = render "cooks/shared/links"
