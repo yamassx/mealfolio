@@ -35,16 +35,14 @@
       padding: 10px;
       width: 300px;
       border-width: 0px;
-      vertical-align: baseline;
       &__img {
-        width: 300px;
+        width: 100%;
         height: 200px;
         background-color: lightyellow;
       }
       &__title {
         background-color: white;
         height: 80px;
-        font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
         text-decoration: none;
         display: inline-block;
         color: black;
