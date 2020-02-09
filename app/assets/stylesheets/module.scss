@@ -1,0 +1,24 @@
+.form {
+  height: 30px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+.half_form {
+  height: 30px;
+  width: 75px;
+  margin-bottom: 10px;
+}
+
+.submit_btn {
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: skyblue;
+  margin-top: 10px;
+  color: gray;
+  cursor: pointer;
+  &:hover {
+    background-color: royalblue;
+    color: white;
+  }
+}
