@@ -1,5 +1,5 @@
 class CooksController < ApplicationController
   def index
-    @cook = Cook.new
+    # @cook = Cook.new
   end
 end
