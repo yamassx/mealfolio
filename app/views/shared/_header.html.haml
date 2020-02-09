@@ -1,0 +1,26 @@
+-if cook_signed_in? == false && restaurant_signd_in? == false
+  .header
+    .header__title
+    .header__utility
+      .header__utility__cook-new
+      .header__utility__restaurant-new
+      .header__utility__cook-login
+      .header__utility__restaurant-login
+
+-elsif cook_signed_in?
+  .header
+    .header__title
+    .header__utility
+      .header__utility__portfolios
+      .header__utility__articles
+      .header__utility__logout
+      .header__utility__search
+      
+-elsif restaurant_signed_in?
+  .header
+    .header__title
+    .header__utility
+      .header__utility__portfolios
+      .header__utility__articles
+      .header__utility__logout
+      .header__utility__search
