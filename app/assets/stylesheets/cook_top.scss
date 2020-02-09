@@ -1,0 +1,55 @@
+.cooks-top {
+  &__middle-head {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &__name {
+      font-size: 24px;
+      margin-left: 55px;
+      min-width: 8em;
+      display: block;
+    }
+    &__tabs {
+      margin-right: 115px;
+      display: flex;
+      justify-content: flex-end;
+      .tab {
+        margin: 0 5px;
+        height: 45px;
+        width: 100px;
+        background-color: greenyellow;
+        text-align: center;
+        line-height: 45px;
+      }
+    }
+  }
+  &__contents {
+    background-color: lightgray;
+    min-height: calc(100vh - 170px);
+    min-width: 600px;
+    margin: 0 30px;
+
+    // サムネイル
+    &__thumbnail {
+      padding: 10px;
+      width: 300px;
+      border-width: 0px;
+      vertical-align: baseline;
+      &__img {
+        width: 300px;
+        height: 200px;
+        background-color: lightyellow;
+      }
+      &__title {
+        background-color: white;
+        height: 80px;
+        font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        color: black;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,5 +1,20 @@
-= render "shared/header"
-= link_to "Sign up", new_cook_registration_path
-= link_to "店舗Sign up", new_restaurant_registration_path
-= link_to "Log in", new_cook_session_path
-= link_to "Log out", destroy_cook_session_path,method: :delete
+.cooks-top
+  = render "shared/header"
+  -# = link_to "Sign up", new_cook_registration_path
+  -# = link_to "店舗Sign up", new_restaurant_registration_path
+  -# = link_to "Log in", new_cook_session_path
+  -# = link_to "Log out", destroy_cook_session_path,method: :delete
+  .cooks-top__middle-head
+    .cooks-top__middle-head__name
+      ゲストさん
+    .cooks-top__middle-head__tabs
+      .cooks-top__middle-head__tabs__pf.tab
+        portfolio
+      .cooks-top__middle-head__tabs__ac.tab
+        article
+      .cooks-top__middle-head__tabs__prof.tab
+        profile
+  .cooks-top__contents
+    .cooks-top__contents__thumbnail
+      .cooks-top__contents__thumbnail__img
+      .cooks-top__contents__thumbnail__title

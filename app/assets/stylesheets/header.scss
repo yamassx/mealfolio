@@ -5,8 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: auto;
   .ulink {
     height: 20px;
+    min-width: 7em;
+    text-align: center;
     background-color: snow;
     margin: 0 5px;
     background-color: springgreen;
