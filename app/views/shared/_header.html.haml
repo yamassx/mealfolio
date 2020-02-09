@@ -1,26 +1,24 @@
--if cook_signed_in? == false && restaurant_signd_in? == false
-  .header
-    .header__title
+.header
+  .header__title
+    = link_to "Mealfolio", root_path, class: "link"
+  -if cook_signed_in? == false && restaurant_signed_in? == false
     .header__utility
-      .header__utility__cook-new
-      .header__utility__restaurant-new
-      .header__utility__cook-login
-      .header__utility__restaurant-login
+      .header__utility__cook-new.ulink
+        = link_to "調理人登録", new_cook_registration_path, class: "link"
+      .header__utility__restaurant-new.ulink
+        = link_to "店舗登録", new_restaurant_registration_path, class: "link"
+      .header__utility__cook-login.ulink
+        = link_to "調理人ログイン", new_cook_session_path, class: "link"
+      .header__utility__restaurant-login.ulink
+        = link_to "店舗ログイン", new_restaurant_session_path, class: "link"       
 
--elsif cook_signed_in?
-  .header
-    .header__title
+  -elsif cook_signed_in? || restaurant_signed_in?
     .header__utility
-      .header__utility__portfolios
-      .header__utility__articles
-      .header__utility__logout
-      .header__utility__search
-      
--elsif restaurant_signed_in?
-  .header
-    .header__title
-    .header__utility
-      .header__utility__portfolios
-      .header__utility__articles
-      .header__utility__logout
-      .header__utility__search
+      .header__utility__portfolios.ulink
+        投稿一覧
+      .header__utility__articles.ulink
+        記事一覧
+      .header__utility__logout.ulink
+        ログアウト
+      .header__utility__search.ulink
+        検索（未実装）
