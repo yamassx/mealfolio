@@ -1,0 +1,2 @@
+class Pfimage < ApplicationRecord
+end
