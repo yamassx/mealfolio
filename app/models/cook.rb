@@ -4,4 +4,6 @@ class Cook < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :first_name, :last_name, :nickname, presence: true
+  has_many :portfolios
+  
 end
