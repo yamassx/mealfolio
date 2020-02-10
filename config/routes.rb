@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     registrations: 'cooks/registrations'
   }
   resources :cooks, only: [:edit, :update]
-  resources :portfolios, only: :[:index] 
+  resources :portfolios, only: [:index] 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
