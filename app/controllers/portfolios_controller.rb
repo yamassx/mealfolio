@@ -20,6 +20,6 @@ class PortfoliosController < ApplicationController
   private
 
     def portfolio_params
-      params.require(:portfolio).permit(:title, :tecnic, :detale).merge(cook_id: current_cook.id)
+      params.require(:portfolio).permit(:title, :tecnic, :detale, :image1, :image2, :image3).merge(cook_id: current_cook.id)
     end
 end

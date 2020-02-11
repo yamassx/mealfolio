@@ -5,8 +5,14 @@
     = form_with(model: @portfolio, local: true) do |form| 
       = form.text_field :title, placeholder: "品名" ,class: "form"
       %br
+      = form.file_field :image1, placeholder: "1枚目の画像",class: "file-form"
+      %br
+      = form.file_field :image1, placeholder: "2枚目の画像",class: "file-form"
+      %br
+      = form.file_field :image1, placeholder: "3枚目の画像",class: "file-form"
+      %br
       -# = form.fields_for :pfimage
-      = form.text_area :tecnic, placeholder: "使用技術など" , class: "form"
+      = form.text_area :tecnic, placeholder: "使用技術など" , class: "text-form"
       %br
       = form.text_area :detale, placeholder: "text" , rows: "10" ,class: "text-form"
       %br
