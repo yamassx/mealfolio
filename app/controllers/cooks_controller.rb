@@ -1,5 +1,5 @@
 class CooksController < ApplicationController
   def index
-    # @cook = Cook.new
+   @portfolios = Portfolio.all
   end
 end

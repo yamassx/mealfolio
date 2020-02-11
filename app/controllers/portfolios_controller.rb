@@ -1,10 +1,11 @@
 class PortfoliosController < ApplicationController
   def index
     @portfolios = Portfolio.all
+    @portfolio = Portfolio.find(params[:id])
+    # render template: "cooks/index"
   end
   def new
     @portfolio = Portfolio.new
-    # @portfolio.pfimage.new
   end
   def create
     @portfolio = Portfolio.new(portfolio_params)

@@ -16,4 +16,6 @@
         article
       .cooks-top__middle-head__tabs__prof.tab
         profile
-  = render template: "portfolios/index"
+  .cooks-top__contents
+    - @portfolios.each do |portfolio|
+      = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
