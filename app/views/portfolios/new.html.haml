@@ -6,9 +6,9 @@
       = form.text_field :title, placeholder: "品名" ,class: "form"
       %br
       -# = form.fields_for :pfimage
-      = form.text_field :tecnic, placeholder: "使用技術など" , class: "form"
+      = form.text_area :tecnic, placeholder: "使用技術など" , class: "form"
       %br
-      = form.text_area :detail, placeholder: "text" , rows: "10" ,class: "text-form"
+      = form.text_area :detale, placeholder: "text" , rows: "10" ,class: "text-form"
       %br
       = form.submit "SEND", class: "submit_btn"
    
