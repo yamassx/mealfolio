@@ -1,0 +1,14 @@
+.new-portfolio
+  .new-portfolio__title
+    ポートフォリオの投稿
+  .new-portfolio__forms
+    = form_with(model: @portfolio, local: true) do |form| 
+      = form.text_field :title, placeholder: "品名" ,class: "form"
+      %br
+      -# = form.fields_for :pfimage
+      = form.text_field :tecnic, placeholder: "使用技術など" , class: "form"
+      %br
+      = form.text_area :detail, placeholder: "text" , rows: "10" ,class: "text-form"
+      %br
+      = form.submit "SEND", class: "submit_btn"
+   

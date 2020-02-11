@@ -10,8 +10,7 @@ Rails.application.routes.draw do
     passwords:     'cooks/passwords',
     registrations: 'cooks/registrations'
   }
-  resources :cooks, only: [:edit, :update] do
-    resources :portfolios, only: [:index] 
-  end
+  resources :cooks, only: [:edit, :update]
+  resources :portfolios, only: [:index, :new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

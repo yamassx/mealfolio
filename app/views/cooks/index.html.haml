@@ -7,6 +7,8 @@
   .cooks-top__middle-head
     .cooks-top__middle-head__name
       ゲストさん
+      =link_to new_portfolio_path do
+        テスト用投稿
     .cooks-top__middle-head__tabs
       .cooks-top__middle-head__tabs__pf.tab
         portfolio
@@ -14,8 +16,4 @@
         article
       .cooks-top__middle-head__tabs__prof.tab
         profile
-  .cooks-top__contents
-    -# = render @portfolios
-    .cooks-top__contents__thumbnail
-      .cooks-top__contents__thumbnail__img
-      .cooks-top__contents__thumbnail__title
+  = render template: "portfolios/index"
