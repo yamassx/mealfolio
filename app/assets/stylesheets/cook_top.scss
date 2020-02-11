@@ -28,9 +28,12 @@
     background-color: lightgray;
     min-height: calc(100vh - 170px);
     min-width: 600px;
+    // max-width: 900px;;
     margin: 0 30px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
     // サムネイル
     &__thumbnail {
       padding: 10px;
