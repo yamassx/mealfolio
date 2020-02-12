@@ -1,0 +1,9 @@
+-# = render partial: "portfolios/portfolio", collection: @portfolios
+-# .cooks-top__contents__thumbnail
+-#   .cooks-top__contents__thumbnail__img
+-#   .cooks-top__contents__thumbnail__title
+.cooks-top__contents__thumbnail
+  .cooks-top__contents__thumbnail__img
+    =image_tag (portfolio.image1.url), size: "250,200", class: "image"
+  .cooks-top__contents__thumbnail__title
+    = "#{portfolio.title}"

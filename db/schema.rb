@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_08_083626) do
+ActiveRecord::Schema.define(version: 2020_02_09_171919) do
 
   create_table "cooks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(version: 2020_02_08_083626) do
     t.index ["reset_password_token"], name: "index_cooks_on_reset_password_token", unique: true
   end
 
+  create_table "portfolios", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "tecnic"
+    t.text "detale"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.bigint "cook_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cook_id"], name: "index_portfolios_on_cook_id"
+  end
+
   create_table "restaurants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -41,4 +54,5 @@ ActiveRecord::Schema.define(version: 2020_02_08_083626) do
     t.index ["reset_password_token"], name: "index_restaurants_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "portfolios", "cooks"
 end
