@@ -9,6 +9,11 @@ class PortfoliosController < ApplicationController
   end
   def create
     @portfolio = Portfolio.new(portfolio_params)
+    if params[:image1] != nil
+      img = MiniMagick::Pfimage.read(params[:image1])
+      img.resize_to_fill '250,200,"Center"'
+      img.write "public/images/portfolio.jpg"
+    end
     if @portfolio.save
       redirect_to root_path, notice: '投稿されました'
     else
