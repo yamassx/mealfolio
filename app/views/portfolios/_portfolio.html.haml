@@ -13,6 +13,5 @@
           -# =link_to "詳細", show_portfolio_path
           詳細
         %li
-          -# =link_to "削除", destroy_portfolio_path
-          削除
+          =link_to "削除", "/portfolios/#{portfolio.id}", method: :delete
     
