@@ -6,7 +6,10 @@
   -# = link_to "Log out", destroy_cook_session_path,method: :delete
   .cooks-top__middle-head
     .cooks-top__middle-head__name
-      ゲストさん
+      -if cook_signed_in?
+        #{current_cook.nickname}さん
+      - else
+        ゲストさん
       =link_to new_portfolio_path do
         テスト用投稿
     .cooks-top__middle-head__tabs

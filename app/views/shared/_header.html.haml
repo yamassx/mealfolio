@@ -19,6 +19,6 @@
       .header__utility__articles.ulink
         記事一覧
       .header__utility__logout.ulink
-        ログアウト
+        = link_to "ログアウト", destroy_cook_session_path, method: :delete
       .header__utility__search.ulink
         検索（未実装）

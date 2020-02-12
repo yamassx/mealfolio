@@ -51,13 +51,27 @@
           max-width: 100%;
         }
       }
-      &__title {
+      &__footer {
         background-color: white;
         height: 80px;
         text-decoration: none;
         display: inline-block;
         color: black;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &__title {
+
+        }
+        &__utility {
+          position: absolute;
+          bottom: 5px;
+          right: 10px;
+          ul li {
+            list-style: none;
+          }
+        }
       }
     }
   }
