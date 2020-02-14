@@ -92,10 +92,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  set :ssh_otions, {
-    port: 3001,
-    keys: '~/.ssh/sistercomplex.pem',
-    user: "ec2-user",
-    forward_agent: true,
-}
+  
 end
