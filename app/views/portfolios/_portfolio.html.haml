@@ -6,11 +6,13 @@
       = "#{portfolio.title}"
     .cooks-top__contents__thumbnail__footer__utility
       %ul
-        %li
-          =link_to "編集", "/portfolios/#{portfolio.id}/edit", method: :get
-        %li
-          -# =link_to "詳細", show_portfolio_path
+        %li 
           詳細
-        %li
-          =link_to "削除", "/portfolios/#{portfolio.id}", method: :delete
+          -# =link_to "詳細", show_portfolio_path
+            詳細
+        -if cook_signed_in? && portfolio.cook_id == current_cook.id
+          %li
+            =link_to "編集", "/portfolios/#{portfolio.id}/edit", method: :get
+          %li
+            =link_to "削除", "/portfolios/#{portfolio.id}", method: :delete
     

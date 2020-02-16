@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :authenticate_cook!, except: :index
   before_action :set_portfolio, only: [:index, :update]
 
   def index

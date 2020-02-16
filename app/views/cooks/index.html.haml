@@ -6,8 +6,10 @@
         #{current_cook.nickname}さん
       - else
         ゲストさん
-      =link_to new_portfolio_path do
-        テスト用投稿
+    .cooks-top__middle-head__test
+      -if cook_signed_in?
+        =link_to new_portfolio_path do
+          テスト用投稿
     .cooks-top__middle-head__tabs
       .cooks-top__middle-head__tabs__pf.tab
         works
