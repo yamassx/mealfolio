@@ -37,7 +37,7 @@ namespace :deploy do
       if test "[ ! -d #{shared_path}/config ]"
         execute "mkdir -p #{shared_path}/config"
       end
-      upload!('config/secrets.yml', "#{shared_path}/master.key")
+      upload!('config/master.key', "#{shared_path}/master.key")
     end
   end
   before :starting, 'deploy:upload'
