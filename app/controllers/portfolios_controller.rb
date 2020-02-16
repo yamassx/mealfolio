@@ -1,14 +1,16 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:index, :edit, :update, :destroy]
+  before_action :set_portfolio, only: [:index, :update, :destroy]
+
   def index
     @portfolios = Portfolio.all
     # render template: "cooks/index"
   end
+
   def new
     @portfolio = Portfolio.new
   end
+
   def create
-    binding.pry
     @portfolio = Portfolio.new(portfolio_params)
     if params[:image1] != nil
       img = MiniMagick::Pfimage.read(params[:image1])
@@ -23,8 +25,11 @@ class PortfoliosController < ApplicationController
       render :index
     end
   end
+
   def edit
+    
   end
+
   def update
     @portfolio.update(portfolio_params)
   end
@@ -38,6 +43,7 @@ class PortfoliosController < ApplicationController
     def set_portfolio
       @portfolio = Portfolio.find(params [:id])
     end
+
     def portfolio_params
       params.require(:portfolio).permit(:title, :tecnic, :detale, :image1, :image2, :image3).merge(cook_id: current_cook.id)
     end
