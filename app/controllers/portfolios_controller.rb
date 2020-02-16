@@ -8,6 +8,7 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.new
   end
   def create
+    binding.pry
     @portfolio = Portfolio.new(portfolio_params)
     if params[:image1] != nil
       img = MiniMagick::Pfimage.read(params[:image1])
@@ -34,12 +35,12 @@ class PortfoliosController < ApplicationController
   end
 
   private
-
+    def set_portfolio
+      @portfolio = Portfolio.find(params [:id])
+    end
     def portfolio_params
       params.require(:portfolio).permit(:title, :tecnic, :detale, :image1, :image2, :image3).merge(cook_id: current_cook.id)
     end
 
-    def set_portfolio
-      @portfolio = Portfolio.find(params [:id])
-    end
+    
 end
