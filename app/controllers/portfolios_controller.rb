@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:index, :update, :destroy]
+  before_action :set_portfolio, only: [:index, :update]
 
   def index
     @portfolios = Portfolio.all
@@ -35,6 +35,7 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
+    portfolio = Portfolio.find(params[:id])
     portfolio.destroy
     redirect_to "#"
   end
