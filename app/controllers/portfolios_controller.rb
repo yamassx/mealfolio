@@ -1,12 +1,15 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only: [:index, :update, :destroy]
+
   def index
     @portfolios = Portfolio.all
-    @portfolio = Portfolio.find(params[:id])
     # render template: "cooks/index"
   end
+
   def new
     @portfolio = Portfolio.new
   end
+
   def create
     @portfolio = Portfolio.new(portfolio_params)
     if params[:image1] != nil
@@ -18,20 +21,32 @@ class PortfoliosController < ApplicationController
       redirect_to root_path, notice: '投稿されました'
     else
       # @portfolios = @cook.portfolios.includes(:cook)
-      flash.now[:alert] = 'メッセージを入力してください。'
+      flash.now[:alert] = '保存ができませんでした'
       render :index
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    @portfolio.update(portfolio_params)
+  end
+
   def destroy
-    portfolio = Portfolio.find(params[:id])
     portfolio.destroy
     redirect_to "#"
   end
 
   private
+    def set_portfolio
+      @portfolio = Portfolio.find(params [:id])
+    end
 
     def portfolio_params
       params.require(:portfolio).permit(:title, :tecnic, :detale, :image1, :image2, :image3).merge(cook_id: current_cook.id)
     end
+
+    
 end
