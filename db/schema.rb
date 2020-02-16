@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2020_02_09_171919) do
     t.string "title", null: false
     t.text "tecnic"
     t.text "detale"
-    t.string "image1"
+    t.string "image1", null: false
     t.string "image2"
     t.string "image3"
     t.bigint "cook_id"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2020_02_09_171919) do
   end
 
   create_table "restaurants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "greeting"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
