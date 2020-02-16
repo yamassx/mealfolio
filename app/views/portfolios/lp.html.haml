@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Tabetech
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'lp', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{ rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
+    = javascript_include_tag 'application', data: { turbolinks: { track: true }}
+    %script{ type: "text/javascript", src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
+
+  %body
+
+.landing_page
+  .landing_page__header
+    %span{class: "tabetech"}
+      Tabetech　　
+    〜食xテクノロジーでソリューションをご提案〜
+  .landing_page__contents
+    .landing_page__contents__image_slicker.slider
+      %li
+        = image_tag 'sushiPAS02123_TP_V.jpg', class: "image"
+      %li
+        = image_tag 'CKL_kaunta-ninarandaosake.jpg', class: "image"
+      %li
+        = image_tag 'BIBAI2122_TP_V.jpg', class: "image"
+      %li
+        = image_tag 'PAK65_torinosubottlenarabu20130825.jpg', class: "image"
+    .landing_page__contents__lp-portfolio
+      .landing_page__contents__lp-portfolio__bg
+      .landing_page__contents__lp-portfolio__header
+        %span{class: "eatfolio"}〜eatfolio〜
+        %p  料理人のポートフォリオ　
+      .landing_page__contents__lp-portfolio__content
+        %p  料理人の作品投稿フォーマットです。
+        %p  ◎採用、転職活動に。
+        %p  ◎仲間内での研鑚に。
+      = link_to portfolios_path, method: :get, class: "portfolio_link" do
+        .link_btn ご利用はこちら
+    .landing_page__contents__lp-store_management
+    .landing_page__contents__lp-reserve
