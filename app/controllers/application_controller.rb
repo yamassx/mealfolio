@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :first_name, :last_name])
+    devise_parameter_sanitizer.permit(:sign_up) do |cook_params|
+      cook_params.permit(:nickname, :first_name, :last_name)
+    end
+    devise_parameter_sanitizer.permit(:sign_up) do |restaurant_params|
+      restaurant_params.permit(:name, :greeting)
+    end
   end
 end
+
+
