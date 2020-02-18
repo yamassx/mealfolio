@@ -1,7 +1,6 @@
 // *{
 //   box-sizing: border-box;
 // }
-@import url('https://fonts.googleapis.com/css?family=Unica+One&display=swap');
 
 .landing_page {
   background-color:lightgray;
@@ -45,6 +44,8 @@
     &__lp-portfolio {
       margin: 20px auto;
       position: relative;
+      height: 250px;
+      width: 100%;
       &__bg {
         height: 250px;
         width: 100%;
@@ -79,7 +80,7 @@
       &__content {
         display: inline-block;
         position: absolute;
-        bottom: 20px;
+        top: 70px;
         left: 20px;
         font-size: 20px;
         font-weight: bold;
