@@ -1,16 +1,3 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Tabetech
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'lp', media: 'all', 'data-turbolinks-track': 'reload'
-    %link{ rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
-    = javascript_include_tag 'application', data: { turbolinks: { track: true }}
-    %script{ type: "text/javascript", src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
-
-  %body
 
 .landing_page
   .landing_page__header
@@ -30,7 +17,7 @@
     .landing_page__contents__lp-portfolio
       .landing_page__contents__lp-portfolio__bg
       .landing_page__contents__lp-portfolio__header
-        %span{class: "eatfolio"}〜eatfolio〜
+        %span{class: "eatfolio"}〜mealfolio〜
         %p  料理人のポートフォリオ　
       .landing_page__contents__lp-portfolio__content
         %p  料理人の作品投稿フォーマットです。
