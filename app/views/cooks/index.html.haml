@@ -11,12 +11,15 @@
         =link_to new_portfolio_path do
           テスト用投稿
     .cooks-top__middle-head__tabs
-      .cooks-top__middle-head__tabs__pf.tab
-        works
-      .cooks-top__middle-head__tabs__ac.tab
-        articles
-      .cooks-top__middle-head__tabs__prof.tab
-        profile
-  .cooks-top__contents
+      %ul
+        %li.cooks-top__middle-head__tabs__pf.tab.is-active
+          works
+        %li.cooks-top__middle-head__tabs__ac.tab
+          articles
+        %li.cooks-top__middle-head__tabs__prof.tab
+          profile
+  .cooks-top__portfolios.panel.is-show
     - @portfolios.each do |portfolio|
       = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
+  .cooks-top__articles.panel
+  .cooks-top__profile.panel

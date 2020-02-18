@@ -11,25 +11,28 @@
       display: block;
     }
     &__tabs {
-      margin-right: 115px;
-      display: flex;
-      justify-content: flex-end;
-      .tab {
-        margin: 0 5px;
-        height: 45px;
-        width: 100px;
-        background-color: greenyellow;
-        text-align: center;
-        line-height: 45px;
+      ul {
+        margin-right: 115px;
+        display: flex;
+        justify-content: flex-end;
+        .tab {
+          margin: 0 5px;
+          height: 45px;
+          width: 100px;
+          background-color: greenyellow;
+          text-align: center;
+          line-height: 45px;
+        }
       }
     }
   }
-  &__contents {
+  .panel {
     background-color: lightgray;
     min-height: calc(100vh - 170px);
     min-width: 600px;
-    // max-width: 900px;;
     margin: 0 30px;
+  }
+  &__portfolios {
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
