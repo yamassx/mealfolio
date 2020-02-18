@@ -10,7 +10,7 @@
       -if cook_signed_in?
         =link_to new_portfolio_path do
           テスト用投稿
-    .cooks-top__middle-head__tabs
+    .cooks-top__middle-head__tabs.tab-group
       %ul
         %li.cooks-top__middle-head__tabs__pf.tab.is-active
           works
@@ -18,8 +18,9 @@
           articles
         %li.cooks-top__middle-head__tabs__prof.tab
           profile
-  .cooks-top__portfolios.panel.is-show
-    - @portfolios.each do |portfolio|
-      = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
-  .cooks-top__articles.panel
-  .cooks-top__profile.panel
+  .cooks-top__contents.panel-group
+    .cooks-top__contents__portfolios.panel.is-show
+      - @portfolios.each do |portfolio|
+        = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
+    .cooks-top__contents__articles.panel
+    .cooks-top__contents__profile.panel
