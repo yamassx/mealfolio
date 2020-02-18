@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "cooks#index"
+  # root "cooks#index"
+  root "portfolios#lp"
   devise_for :restaurants, controllers: {
     sessions:      'restaurants/sessions',
     passwords:     'restaurants/passwords',

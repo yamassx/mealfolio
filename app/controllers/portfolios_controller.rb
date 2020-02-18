@@ -1,7 +1,10 @@
 class PortfoliosController < ApplicationController
-  before_action :authenticate_cook!, except: :index
+  before_action :authenticate_cook!, except: [:index, :lp]
   before_action :set_portfolio, only: [:index, :update]
-
+  
+  def lp
+    render :layout => 'lp'
+  end
   def index
     @portfolios = Portfolio.all
     # render template: "cooks/index"
