@@ -1,0 +1,249 @@
+// *{
+//   box-sizing: border-box;
+// }
+
+.landing_page {
+  background-color:lightgray;
+  &__header {
+    height: 100px;
+    width: 100vw;
+    background-color: blue;
+    margin: 0;
+    line-height: 100px;
+    font-size: 20px;
+    color: rgba(245, 245, 245, 0.55);
+    text-shadow:1px 1px 1px lightgray;
+    .tabetech {
+      color: rgb(255, 196, 0);
+      font-weight: bold;
+      font-size: 40px;
+      font-family: impact;
+      text-shadow: 5px 5px 1px #9999999f;
+      margin-left: 1em;
+    }
+  }
+  &__contents {
+    width: 80vw;
+    margin: 0 auto;
+    .slider {
+      display: none;
+    }
+    .slider.slick-initialized {
+      display: block;
+    }
+    &__image_slicker {
+      height: 400px;
+      width: 100%;
+      background-color: yellow;
+      margin: 10px auto;
+      li {
+        list-style: none;
+      }
+      .image {
+        max-width: 100%;
+        width: 100%;
+        max-height: 400px; 
+        height: auto;
+        vertical-align: bottom;
+      }
+    }
+    &__lp-portfolio {
+      margin: 20px auto;
+      position: relative;
+      height: 250px;
+      width: 100%;
+      &__bg {
+        height: 250px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-image: image-url('MOK_unitotoro.jpg');
+        opacity: 0.6;
+      }
+      &__header {
+        height: 50px;
+        line-height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        display:flex;
+        align-items: center;
+        text-shadow:1px 1px 1px lightgray;
+        .eatfolio{
+          font-size: 40px;
+          font-family: "Unica One";
+          color: rgba(13, 77, 18, 0.527);
+          font-weight: bolder;
+          display:inline-block;
+          padding: 0 1.5em;
+        }
+        p {
+          display: inline-block;
+          
+        }
+      }
+      &__content {
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:1px 1px 1px lightgray;
+      }
+      .portfolio_link {
+        text-decoration: none;
+        .link_btn {
+          text-decoration: none;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 10px;
+          color:　black;
+          height: 40px;
+          width: 120px;
+          background-color: skyblue;
+          position: absolute;
+          bottom: 30px;
+          right: 20px;
+          padding-bottom: 1px;
+        }
+      }
+    } 
+    &__lp-store_management {
+      height: 250px;
+      width:100%;
+      // background-size: 100%;
+      // background-position: center;
+      // background-image: image-url('fishes.jpg');
+      // opacity: 0.5;
+      margin: 20px auto;
+      position: relative;
+      &__bg {
+        height: 250px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-image: image-url('jimu.jpg');
+        opacity: 0.6;
+      }
+      &__header {
+        height: 50px;
+        line-height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        display:flex;
+        align-items: center;
+        text-shadow:1px 1px 1px lightgray;
+        .manager{
+          font-size: 40px;
+          font-family: "Unica One";
+          color: rgba(13, 77, 18, 0.527);
+          font-weight: bolder;
+          display:inline-block;
+          padding: 0 1.5em;
+        }
+        p {
+          display: inline-block;
+          
+        }
+      }
+      &__content {
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:1px 1px 1px lightgray;
+      }
+      .manager_link {
+        text-decoration: none;
+        .link_btn {
+          text-decoration: none;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 10px;
+          color:　black;
+          height: 40px;
+          width: 120px;
+          background-color: skyblue;
+          position: absolute;
+          bottom: 30px;
+          right: 20px;
+          padding-bottom: 1px;
+        }
+      }
+    }
+    &__lp-reserve {
+      height: 250px;
+      width: 100%;
+      margin: 20px auto;
+      // background-size: 100%;
+      // background-position: center;
+      // background-image: image-url('9c18c644b6dbc60faf76980547b85843_w.jpg');
+      // opacity: 0.5;
+      position: relative;
+      &__bg {
+        height: 250px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-image: image-url('kanpaiFTHG0531.jpg');
+        opacity: 0.6;
+      }
+      &__header {
+        height: 50px;
+        max-width: 100%;
+        line-height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        display:flex;
+        align-items: center;
+        text-shadow:1px 1px 1px lightgray;
+        .eatfolio{
+          font-size: 40px;
+          font-family: "Unica One";
+          color: rgba(13, 77, 18, 0.527);
+          font-weight: bolder;
+          display:inline-block;
+          padding: 0 1.5em;
+        }
+        p {
+          display: inline-block;
+          
+        }
+      }
+      &__content {
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:1px 1px 1px lightgray;
+      }
+      .reserve_link {
+        text-decoration: none;
+        .link_btn {
+          text-decoration: none;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 10px;
+          color:　black;
+          height: 40px;
+          width: 120px;
+          background-color: skyblue;
+          position: absolute;
+          bottom: 30px;
+          right: 20px;
+          padding-bottom: 1px;
+        }
+      }
+    }
+  }
+}
