@@ -20,10 +20,33 @@
         %span{class: "eatfolio"}〜mealfolio〜
         %p  料理人のポートフォリオ　
       .landing_page__contents__lp-portfolio__content
-        %p  料理人の作品投稿フォーマットです。
+        %p  料理人の作品・技術記事投稿フォーマットです。
         %p  ◎採用、転職活動に。
         %p  ◎仲間内での研鑚に。
+        %p  ◎ご家庭での本格的料理の参考に
       = link_to cooks_path, method: :get, class: "portfolio_link" do
         .link_btn ご利用はこちら
     .landing_page__contents__lp-store_management
+      .landing_page__contents__lp-store_management__bg
+      .landing_page__contents__lp-store_management__header
+        %span{class: "manager"}〜storemanager〜
+        %p  個人事業主向け営業管理アプリ　
+      .landing_page__contents__lp-store_management__content
+        %p  個人事業主向け営業管理アプリです。
+        %p  ◎利益構造の見直しに。
+        %p  ◎改善活動に。
+        %p  ◎帳簿管理等面倒な作業に。
+      = link_to "#", method: :get, class: "manager_link" do
+        .link_btn <未実装>
     .landing_page__contents__lp-reserve
+      .landing_page__contents__lp-reserve__bg
+      .landing_page__contents__lp-reserve__header
+        %span{class: "eatfolio"}〜reserve alert〜
+        %p アプリで予約ができるシステム　
+      .landing_page__contents__lp-reserve__content
+        %p  料理人の作品・技術記事投稿フォーマットです。
+        %p  ◎簡単予約で集客につなげる。
+        %p  ◎予約情報をアラートでお知らせ。
+        %p  ◎キャンセル料なども自動で管理。
+      = link_to "#", method: :get, class: "reserve_link" do
+        .link_btn <未実装>

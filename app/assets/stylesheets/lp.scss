@@ -113,21 +113,137 @@
     &__lp-store_management {
       height: 250px;
       width:100%;
-      background-size: 100%;
-      background-position: center;
-      background-image: image-url('fishes.jpg');
-      opacity: 0.5;
+      // background-size: 100%;
+      // background-position: center;
+      // background-image: image-url('fishes.jpg');
+      // opacity: 0.5;
       margin: 20px auto;
+      position: relative;
+      &__bg {
+        height: 250px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-image: image-url('jimu.jpg');
+        opacity: 0.6;
+      }
+      &__header {
+        height: 50px;
+        line-height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        display:flex;
+        align-items: center;
+        text-shadow:1px 1px 1px lightgray;
+        .manager{
+          font-size: 40px;
+          font-family: "Unica One";
+          color: rgba(13, 77, 18, 0.527);
+          font-weight: bolder;
+          display:inline-block;
+          padding: 0 1.5em;
+        }
+        p {
+          display: inline-block;
+          
+        }
+      }
+      &__content {
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:1px 1px 1px lightgray;
+      }
+      .manager_link {
+        text-decoration: none;
+        .link_btn {
+          text-decoration: none;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 10px;
+          color:　black;
+          height: 40px;
+          width: 120px;
+          background-color: skyblue;
+          position: absolute;
+          bottom: 30px;
+          right: 20px;
+          padding-bottom: 1px;
+        }
+      }
     }
     &__lp-reserve {
       height: 250px;
       width: 100%;
-      background-color: purple;
       margin: 20px auto;
-      background-size: 100%;
-      background-position: center;
-      background-image: image-url('9c18c644b6dbc60faf76980547b85843_w.jpg');
-      opacity: 0.5;
+      // background-size: 100%;
+      // background-position: center;
+      // background-image: image-url('9c18c644b6dbc60faf76980547b85843_w.jpg');
+      // opacity: 0.5;
+      position: relative;
+      &__bg {
+        height: 250px;
+        width: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-image: image-url('kanpaiFTHG0531.jpg');
+        opacity: 0.6;
+      }
+      &__header {
+        height: 50px;
+        max-width: 100%;
+        line-height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        display:flex;
+        align-items: center;
+        text-shadow:1px 1px 1px lightgray;
+        .eatfolio{
+          font-size: 40px;
+          font-family: "Unica One";
+          color: rgba(13, 77, 18, 0.527);
+          font-weight: bolder;
+          display:inline-block;
+          padding: 0 1.5em;
+        }
+        p {
+          display: inline-block;
+          
+        }
+      }
+      &__content {
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:1px 1px 1px lightgray;
+      }
+      .reserve_link {
+        text-decoration: none;
+        .link_btn {
+          text-decoration: none;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 10px;
+          color:　black;
+          height: 40px;
+          width: 120px;
+          background-color: skyblue;
+          position: absolute;
+          bottom: 30px;
+          right: 20px;
+          padding-bottom: 1px;
+        }
+      }
     }
   }
 }
