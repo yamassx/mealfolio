@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # root "cooks#index"
-  root "portfolios#lp"
+  root to: "portfolios#lp"
   devise_for :restaurants, controllers: {
     sessions:      'restaurants/sessions',
     passwords:     'restaurants/passwords',
@@ -12,6 +11,5 @@ Rails.application.routes.draw do
     registrations: 'cooks/registrations'
   }
   resources :cooks, only: [:edit, :update, :index]
-  resources :portfolios, except: [:show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :portfolios, except: :show
 end
