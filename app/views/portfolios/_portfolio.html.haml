@@ -12,7 +12,7 @@
             詳細
         -if cook_signed_in? && portfolio.cook_id == current_cook.id
           %li
-            =link_to "編集", "/portfolios/#{portfolio.id}/edit", method: :get
+            =link_to "編集", edit_portfolio_path(portfolio.id), method: :get
           %li
             =link_to "削除", "/portfolios/#{portfolio.id}", method: :delete
     

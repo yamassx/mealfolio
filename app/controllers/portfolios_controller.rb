@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
   before_action :authenticate_cook!, except: [:index, :lp]
-  before_action :set_portfolio, only: [:index, :update]
+  # before_action :set_portfolio, only: [:edit]
   
   def lp
     render :layout => 'lp'
@@ -22,7 +22,7 @@ class PortfoliosController < ApplicationController
       img.write "public/images/portfolio.jpg"
     end
     if @portfolio.save
-      redirect_to root_path, notice: '投稿されました'
+      redirect_to cooks_path, notice: '投稿されました'
     else
       # @portfolios = @cook.portfolios.includes(:cook)
       flash.now[:alert] = '保存ができませんでした'
@@ -31,27 +31,29 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    
+    @portfolio = Portfolio.find(params[:id])
   end
 
   def update
+    
+    @portfolio = Portfolio.find(params[:id])
     @portfolio.update(portfolio_params)
+    redirect_to cooks_path
   end
 
   def destroy
     portfolio = Portfolio.find(params[:id])
     portfolio.destroy
-    redirect_to "#"
+    redirect_to cooks_path
   end
 
   private
-    def set_portfolio
-      @portfolio = Portfolio.find(params [:id])
-    end
+  def portfolio_params
+    params.require(:portfolio).permit(:title, :tecnic, :detale, :image1).merge(cook_id: current_cook.id)
+  end
 
-    def portfolio_params
-      params.require(:portfolio).permit(:title, :tecnic, :detale, :image1, :image2, :image3).merge(cook_id: current_cook.id)
-    end
-
-    
+  def set_portfolio
+    @portfolio = Portfolio.find(params [:id])
+  end
+      
 end
