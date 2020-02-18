@@ -25,6 +25,12 @@
   &__contents {
     width: 80vw;
     margin: 0 auto;
+    .slider {
+      display: none;
+    }
+    .slider.slick-initialized {
+      display: block;
+    }
     &__image_slicker {
       height: 400px;
       width: 100%;
