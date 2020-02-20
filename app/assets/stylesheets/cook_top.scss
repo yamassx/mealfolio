@@ -23,7 +23,12 @@
           text-align: center;
           line-height: 45px;
         }
+        .is-active {
+          background-color: lightgray;
+          color: blue;
+        }
       }
+      
     }
   }
   &__contents {
@@ -32,6 +37,10 @@
       min-height: calc(100vh - 170px);
       min-width: 600px;
       margin: 0 30px;
+      display: none;
+    }
+    .is-show {
+      display: block;
     }
     &__portfolios {
       display: flex;
