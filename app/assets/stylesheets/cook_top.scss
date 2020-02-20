@@ -11,65 +11,80 @@
       display: block;
     }
     &__tabs {
-      margin-right: 115px;
-      display: flex;
-      justify-content: flex-end;
-      .tab {
-        margin: 0 5px;
-        height: 45px;
-        width: 100px;
-        background-color: greenyellow;
-        text-align: center;
-        line-height: 45px;
-      }
+        margin-right: 115px;
+        display: flex;
+        justify-content: flex-end;
+        .tab {
+          margin: 0 5px;
+          height: 45px;
+          width: 100px;
+          background-color: greenyellow;
+          text-align: center;
+          line-height: 45px;
+        }
+        .is-active {
+          background-color: lightgray;
+          color: blue;
+        }
+      
     }
   }
   &__contents {
-    background-color: lightgray;
-    min-height: calc(100vh - 170px);
-    min-width: 600px;
-    // max-width: 900px;;
-    margin: 0 30px;
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    // サムネイル
-    &__thumbnail {
-      padding: 10px;
-      width: 250px;
-      border-width: 0px;
-      &__img {
-        width: 100%;
-        height: 200px;
-        background-color: lightyellow;
-        > image {
-          margin: auto;
-          height: 100%;
-          max-height: 100%;
+    .panel {
+      background-color: lightgray;
+      min-height: calc(100vh - 170px);
+      min-width: 600px;
+      margin: 0 30px;
+      display: none;
+    }
+    .panel.is-show {
+      display: block;
+    }
+    #cooks-top__contents__portfolios.panel.is-show{
+      display: flex;
+      justify-content:space-around;
+      align-content: flex-start;
+      flex-wrap: wrap;
+    }
+    &__portfolios {
+      // サムネイル
+      &__thumbnail {
+        padding: 10px;
+        margin-right: 0px;
+        width: 250px;
+        border-width: 0px;
+        &__img {
           width: 100%;
-          max-width: 100%;
+          height: 200px;
+          background-color: lightyellow;
+          > image {
+            margin: auto;
+            height: 100%;
+            max-height: 100%;
+            width: 100%;
+            max-width: 100%;
+          }
         }
-      }
-      &__footer {
-        background-color: white;
-        height: 80px;
-        text-decoration: none;
-        display: inline-block;
-        color: black;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        &__title {
+        &__footer {
+          background-color: white;
+          height: 80px;
+          text-decoration: none;
+          display: inline-block;
+          color: black;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          &__title {
 
-        }
-        &__utility {
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-          ul li {
-            list-style: none;
+          }
+          &__utility {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            ul li {
+              list-style: none;
+            }
           }
         }
       }

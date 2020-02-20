@@ -11,12 +11,20 @@
         =link_to new_portfolio_path do
           テスト用投稿
     .cooks-top__middle-head__tabs
-      .cooks-top__middle-head__tabs__pf.tab
-        works
-      .cooks-top__middle-head__tabs__ac.tab
-        articles
-      .cooks-top__middle-head__tabs__prof.tab
-        profile
-  .cooks-top__contents
-    - @portfolios.each do |portfolio|
-      = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
+      = link_to "#cooks-top__contents__portfolios", class:"tab" do
+        .cooks-top__middle-head__tabs__pf.is-active
+          works
+      = link_to " #cooks-top__contents__articles", class:"tab" do
+        .cooks-top__middle-head__tabs__ac
+          articles
+      = link_to "#cooks-top__contents__profile", class:"tab" do
+        .cooks-top__middle-head__tabs__prof
+          profile
+  .cooks-top__contents.panel-group
+    #cooks-top__contents__portfolios.panel.is-show
+      - @portfolios.each do |portfolio|
+        = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
+    #cooks-top__contents__articles.panel
+      未実装
+    #cooks-top__contents__profile.panel
+      未実装
