@@ -6,11 +6,13 @@
   border: 20px solid lightgray; 
   &__head {
     background-color: lightpink;
-    height: 150px;
     width: 100%;
+    .span {
+      font-size: 10px;
+    }
     &__image {
-      height: 100px;
-      width: 100px;
+      height: 120px;
+      width: 120px;
       border-radius: 50%;
       background-color: lime;
       margin: 0 auto;
@@ -18,6 +20,7 @@
     &__name {
       text-align: center;
       line-height: 3em;
+      font-size: 24px;
     }
   }
   &__content {
@@ -28,9 +31,12 @@
       padding-bottom: 20px;
       &__title {
         text-decoration: underline;
+        font-size: 24px;
+        margin-left: 1em;
+        padding-top: 1em;
       }
       &__text {
-        height: 200px;
+        min-height: 200px;
         margin: 20px;
         border: solid 2px;
         padding-bottom: 20px;
@@ -42,9 +48,12 @@
       padding-bottom: 20px;
       &__title {
         text-decoration: underline;
+        font-size: 24px;
+        margin-left: 1em;
+        padding-top: 1em;
       }
       &__text {
-        height: 200px;
+        min-height: 200px;
         margin: 20px;
         border: solid 2px;
       }
