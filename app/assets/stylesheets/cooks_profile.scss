@@ -5,7 +5,7 @@
   box-sizing: border-box;
   border: 20px solid lightgray; 
   &__head {
-    background-color: lightpink;
+    background-color: rgb(238, 202, 208);
     width: 100%;
     .span {
       font-size: 10px;
@@ -27,7 +27,7 @@
     width: 100%;
     &__history {
       min-height: 200px;
-      background-color: lightsalmon;
+      background-color:  rgb(238, 202, 208);
       padding-bottom: 20px;
       &__title {
         text-decoration: underline;
@@ -44,7 +44,7 @@
     }
     &__pr {
       min-height: 200px;
-      background-color: lightsalmon;
+      background-color: rgb(238, 202, 208);
       padding-bottom: 20px;
       &__title {
         text-decoration: underline;
