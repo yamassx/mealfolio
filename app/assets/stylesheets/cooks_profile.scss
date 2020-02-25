@@ -1,0 +1,53 @@
+.cooks-profile {
+  width: 600px;
+  background-color: lightgray;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 20px solid lightgray; 
+  &__head {
+    background-color: lightpink;
+    height: 150px;
+    width: 100%;
+    &__image {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: lime;
+      margin: 0 auto;
+    }
+    &__name {
+      text-align: center;
+      line-height: 3em;
+    }
+  }
+  &__content {
+    width: 100%;
+    &__history {
+      min-height: 200px;
+      background-color: lightsalmon;
+      padding-bottom: 20px;
+      &__title {
+        text-decoration: underline;
+      }
+      &__text {
+        height: 200px;
+        margin: 20px;
+        border: solid 2px;
+        padding-bottom: 20px;
+      }
+    }
+    &__pr {
+      min-height: 200px;
+      background-color: lightsalmon;
+      padding-bottom: 20px;
+      &__title {
+        text-decoration: underline;
+      }
+      &__text {
+        height: 200px;
+        margin: 20px;
+        border: solid 2px;
+      }
+    }
+  } 
+}
