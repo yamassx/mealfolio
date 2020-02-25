@@ -1,5 +1,4 @@
 .cooks-top
-  -# = render "shared/header"
   .cooks-top__middle-head
     .cooks-top__middle-head__name
       -if cook_signed_in?
@@ -17,14 +16,16 @@
       = link_to " #cooks-top__contents__articles", class:"tab" do
         .cooks-top__middle-head__tabs__ac
           articles
-      = link_to "#cooks-top__contents__profile", class:"tab" do
-        .cooks-top__middle-head__tabs__prof
-          profile
+      - if cook_signed_in?
+        = link_to "#cooks-top__contents__profile", class:"tab" do
+          .cooks-top__middle-head__tabs__prof
+            profile
   .cooks-top__contents.panel-group
     #cooks-top__contents__portfolios.panel.is-show
       - @portfolios.each do |portfolio|
         = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
     #cooks-top__contents__articles.panel
       未実装
-    #cooks-top__contents__profile.panel
-      未実装
+    -if cook_signed_in?
+      #cooks-top__contents__profile.panel
+        =render partial: "profile"
