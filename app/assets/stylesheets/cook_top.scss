@@ -11,22 +11,42 @@
       display: block;
     }
     &__tabs {
-        margin-right: 115px;
+      margin-right: 115px;
+      display: flex;
+      justify-content: flex-end;
+      .tab {
+        margin: 0 5px;
+        height: 45px;
+        width: 100px;
+        background-color: greenyellow;
+        text-align: center;
+        line-height: 45px;
+      }
+      .is-active {
+        background-color: lightgray;
+        color: blue;
+      }
+      &__pf {
         display: flex;
-        justify-content: flex-end;
-        .tab {
-          margin: 0 5px;
-          height: 45px;
-          width: 100px;
-          background-color: greenyellow;
-          text-align: center;
-          line-height: 45px;
+        justify-content: center;
+        &__icon {
+          margin-left: 0.7em;
         }
-        .is-active {
-          background-color: lightgray;
-          color: blue;
+      }
+      &__ac {
+        display: flex;
+        justify-content: center;
+        &__icon {
+          margin-left: 0.7em;
         }
-      
+      }
+      &__prof {
+        display: flex;
+        justify-content: center;
+        &__icon {
+          margin-left: 0.7em;
+        }
+      }
     }
   }
   &__contents {

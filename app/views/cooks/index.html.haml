@@ -12,14 +12,24 @@
     .cooks-top__middle-head__tabs
       = link_to "#cooks-top__contents__portfolios", class:"tab" do
         .cooks-top__middle-head__tabs__pf.is-active
-          works
+          .cooks-top__middle-head__tabs__pf__title
+            works
+          .cooks-top__middle-head__tabs__pf__icon
+            -# = link_to edit_cook_path(current_cook.id)
+            %i.fas.fa-upload
       = link_to " #cooks-top__contents__articles", class:"tab" do
         .cooks-top__middle-head__tabs__ac
-          articles
+          .cooks-top__middle-head__tabs__ac__title
+            articles
+          .cooks-top__middle-head__tabs__ac__icon
+            %i.fas.fa-upload
       - if cook_signed_in?
         = link_to "#cooks-top__contents__profile", class:"tab" do
           .cooks-top__middle-head__tabs__prof
-            profile
+            .cooks-top__middle-head__tabs__prof__title
+              profile
+            .cooks-top__middle-head__tabs__prof__icon
+              %i.fa.fa-edit
   .cooks-top__contents.panel-group
     #cooks-top__contents__portfolios.panel.is-show
       - @portfolios.each do |portfolio|
