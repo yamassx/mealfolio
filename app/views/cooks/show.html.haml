@@ -1,0 +1,19 @@
+.cooks-profile
+  .cooks-profile__head
+    %span　
+    .cooks-profile__head__image
+      -if current_cook.face
+        -# = image_tag current_cook.face.url, alt: '写真を登録しましょう'
+      - else
+        aaa
+    .cooks-profile__head__name
+      #{current_cook.nickname}
+  .cooks-profile__content
+    .cooks-profile__content__history
+      .cooks-profile__content__history__title
+        経歴
+      .cooks-profile__content__history__text
+    .cooks-profile__content__pr
+      .cooks-profile__content__pr__title
+        自己紹介
+      .cooks-profile__content__pr__text

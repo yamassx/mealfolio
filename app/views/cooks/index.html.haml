@@ -8,12 +8,11 @@
             %i.fas.fa-cog
         - else
           ゲストさん
-      .cooks-top__middle-head__title__submit
-        -if cook_signed_in?
+      -if cook_signed_in?
+        .cooks-top__middle-head__title__submit
           =link_to new_portfolio_path do
             作品の投稿
-      .cooks-top__middle-head__title__submit
-        -if cook_signed_in?
+        .cooks-top__middle-head__title__submit
           -# =link_to new_portfolio_path 
           記事の投稿
     .cooks-top__middle-head__tabs
@@ -45,4 +44,4 @@
       未実装
     -if cook_signed_in?
       #cooks-top__contents__profile.panel
-        =render partial: "profile"
+        =render template: 'cooks/show'
