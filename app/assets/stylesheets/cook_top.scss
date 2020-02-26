@@ -4,11 +4,29 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    &__name {
+    &__title {
       font-size: 24px;
       margin-left: 55px;
-      min-width: 8em;
-      display: block;
+      margin-bottom: 5px;
+      display: flex;
+      &__name {
+        min-width: 5em;
+        text-align: center;
+      }
+      &__submit {
+        min-width: 5em;
+        max-height: 30px;
+        border-radius: 5px;
+        background-color: skyblue;
+        color: gray;
+        margin-left: 1em;
+        padding: 5px 0.5em;
+        cursor: pointer;
+        &:hover {
+          background-color: royalblue;
+          color: white;
+        }
+      }
     }
     &__tabs {
       margin-right: 115px;
