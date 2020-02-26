@@ -4,7 +4,8 @@
       .cooks-top__middle-head__title__name
         -if cook_signed_in?
           #{current_cook.nickname}さん
-          %i.fas.fa-cog
+          =link_to edit_cook_path(current_cook.id) do
+            %i.fas.fa-cog
         - else
           ゲストさん
       .cooks-top__middle-head__title__submit
