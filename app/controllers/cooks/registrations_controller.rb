@@ -2,7 +2,7 @@
 
 class Cooks::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   def new
@@ -21,7 +21,13 @@ class Cooks::RegistrationsController < Devise::RegistrationsController
 
   # PUT /resource
   def update
-    super
+    current_cook.assign_attributes(account_update_params)
+    if current_cook.update(account_update_params)
+      sign_in(current_cook, bypass: true)
+      redirect_to cooks_path(current_cook.id), notice: 'プロフィールを更新しました'
+    else
+      render "edit"
+    end
   end
 
   # DELETE /resource
@@ -39,6 +45,10 @@ class Cooks::RegistrationsController < Devise::RegistrationsController
   # end
 
   protected
+
+  def cook_params
+    params.require(:cook).permit(:name, :email, :password, :password_confirmation, :greeting, :history, :face, :background )
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params

@@ -8,7 +8,13 @@ class CooksController < ApplicationController
   end
 
   def update
+    cook = Cook.find(params[:id])
+    cook.update(cook_params)
+    redirect_to cooks_path
+  end
 
+  def show
+    @cook = Cook.find(params[:id])
   end
 
   private

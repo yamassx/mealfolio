@@ -7,5 +7,6 @@ class Cook < ApplicationRecord
   has_many :portfolios
   mount_uploader :face, CookimageUploader
   mount_uploader :background, CookimageUploader
+  attr_accessor :current_password
   
 end
