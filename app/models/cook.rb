@@ -5,6 +5,7 @@ class Cook < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :first_name, :last_name, :nickname, presence: true
   has_many :portfolios
-  # mount_uploaders :face, :background, CookimageUploader
+  mount_uploader :face, CookimageUploader
+  mount_uploader :background, CookimageUploader
   
 end
