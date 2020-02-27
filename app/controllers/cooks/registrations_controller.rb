@@ -63,14 +63,14 @@ class Cooks::RegistrationsController < Devise::RegistrationsController
   end
 
   # The path used after sign up.
-  def after_sign_up_path_for(resource)
-    'cooks/index'
-  end
+  # def after_sign_up_path_for(resource)
+  #   'cooks/index'
+  # end
 
   # The path used after sign up for inactive accounts.
-  def after_inactive_sign_up_path_for(resource)
-    'cooks/index'
-  end
+  # def after_inactive_sign_up_path_for(resource)
+  #   'cooks/index'
+  # end
 
   def face_sizing(width, height)
     if params[:face] != nil
