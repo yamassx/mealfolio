@@ -1,8 +1,8 @@
-class PfimageUploader < CarrierWave::Uploader::Base
+class CookimageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  include CarrierWave::MiniMagick
-  
+  # include CarrierWave::MiniMagick
+
   # Choose what kind of storage to use for this uploader:
   if Rails.env.development? || Rails.env.test?
     storage :file
@@ -33,7 +33,7 @@ class PfimageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   # version :thumb do
-    process resize_to_fill: [250, 200, "Center"]
+  #   process resize_to_fit: [50, 50]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.

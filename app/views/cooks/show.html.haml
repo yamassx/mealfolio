@@ -1,9 +1,11 @@
 .cooks-profile
   .cooks-profile__head
+    -# -if current_cook.background
+    -#   = image_tag current_cook.background.url, alt: '写真を登録しましょう',class:'background'
     %span　
     .cooks-profile__head__image
-      -if @cook.face
-        -# = image_tag @cook.face, alt: '写真を登録しましょう', height: '', width: '', class: ''
+      -if current_cook.face
+        = image_tag current_cook.face.url, alt: '写真を登録しましょう',height: '120px', width: '120px',class:'face'
       - else
         aaa
     .cooks-profile__head__name
@@ -13,7 +15,9 @@
       .cooks-profile__content__history__title
         経歴
       .cooks-profile__content__history__text
+        #{current_cook.history}
     .cooks-profile__content__pr
       .cooks-profile__content__pr__title
         自己紹介
       .cooks-profile__content__pr__text
+        #{current_cook.greeting}

@@ -7,7 +7,6 @@ class PortfoliosController < ApplicationController
   end
   def index
     @portfolios = Portfolio.all
-    # render template: "cooks/index"
   end
 
   def new
@@ -16,15 +15,10 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio = Portfolio.new(portfolio_params)
-    if params[:image1] != nil
-      img = MiniMagick::Pfimage.read(params[:image1])
-      img.resize_to_fill '250,200,"Center"'
-      img.write "public/images/portfolio.jpg"
-    end
+    image_sizing(250, 200)
     if @portfolio.save
       redirect_to cooks_path, notice: '投稿されました'
     else
-      # @portfolios = @cook.portfolios.includes(:cook)
       flash.now[:alert] = '保存ができませんでした'
       render :index
     end
@@ -35,7 +29,6 @@ class PortfoliosController < ApplicationController
   end
 
   def update
-    
     @portfolio = Portfolio.find(params[:id])
     @portfolio.update(portfolio_params)
     redirect_to cooks_path
@@ -56,4 +49,11 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.find(params [:id])
   end
       
+  def image_sizing(width, height)
+    if params[:image1] != nil
+      img = MiniMagick::Pfimage.read(params[:image1])
+      img.resize_to_fill 'width,height,"Center"'
+      img.write "public/images/portfolio.jpg"
+    end
+  end
 end
