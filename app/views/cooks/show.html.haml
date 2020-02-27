@@ -3,7 +3,7 @@
     %span　
     .cooks-profile__head__image
       -if current_cook.face
-        -# = image_tag current_cook.face.url, alt: '写真を登録しましょう'
+        = image_tag current_cook.face.url, alt: '写真を登録しましょう'
       - else
         aaa
     .cooks-profile__head__name
@@ -13,7 +13,9 @@
       .cooks-profile__content__history__title
         経歴
       .cooks-profile__content__history__text
+        #{current_cook.history}
     .cooks-profile__content__pr
       .cooks-profile__content__pr__title
         自己紹介
       .cooks-profile__content__pr__text
+        #{current_cook.greeting}

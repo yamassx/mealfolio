@@ -2,6 +2,10 @@
   .cooks-profile__head
     %span　
     .cooks-profile__head__image
+      -if @cook.face
+        -# = image_tag @cook.face, alt: '写真を登録しましょう', height: '', width: '', class: ''
+      - else
+        aaa
     .cooks-profile__head__name
       #{current_cook.nickname}
   .cooks-profile__content
