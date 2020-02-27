@@ -22,6 +22,8 @@ class Cooks::RegistrationsController < Devise::RegistrationsController
   # PUT /resource
   def update
     current_cook.assign_attributes(account_update_params)
+    # face_sizing(120,120)
+    # background_sizing()
     if current_cook.update(account_update_params)
       sign_in(current_cook, bypass: true)
       redirect_to cooks_path(current_cook.id), notice: 'プロフィールを更新しました'
@@ -68,5 +70,21 @@ class Cooks::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up for inactive accounts.
   def after_inactive_sign_up_path_for(resource)
     'cooks/index'
+  end
+
+  def face_sizing(width, height)
+    if params[:face] != nil
+      img = MiniMagick::Pfimage.read(params[:image1])
+      img.resize_to_fill 'width,height,"Center"'
+      img.write "public/images/portfolio.jpg"
+    end
+  end
+
+  def background_sizing(width, height)
+    if params[:background] != nil
+      img = MiniMagick::Pfimage.read(params[:image1])
+      img.resize_to_fill 'width,height,"Center"'
+      img.write "public/images/portfolio.jpg"
+    end
   end
 end
