@@ -29,7 +29,7 @@
     height: 500px;
     width: 500px;
     margin: 150px auto;
-    background-color: mediumpurple;
+    background-color: rgb(235, 227, 197);
     border-radius: 4px;
     // box-shadow: blueviolet 2px;
     &__image {
@@ -41,11 +41,21 @@
       float: left;
       margin-top: 20px;
       margin-left: 20px;
+      &__title {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
     }
     &__detail {
       clear: both;
-      margin-top: 20px;
+      padding-top: 30px;
       margin-left: 20px;
+      &__title {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
     }
   }
   .clearfix::after {
