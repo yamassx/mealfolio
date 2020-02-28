@@ -7,9 +7,8 @@
     .cooks-top__contents__portfolios__thumbnail__footer__utility
       %ul
         %li 
-          詳細
-          -# =link_to "詳細", show_portfolio_path
-            詳細
+          -# 詳細
+          =link_to "詳細", portfolio_path(portfolio.id), method: :get 
         -if cook_signed_in? && portfolio.cook_id == current_cook.id
           %li
             =link_to "編集", edit_portfolio_path(portfolio.id), method: :get
