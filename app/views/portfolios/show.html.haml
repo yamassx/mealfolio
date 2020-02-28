@@ -1,1 +1,13 @@
-aaaaa
+.show-portfolio
+  .show-portfolio__image
+    =image_tag @portfolio.image1.url size: "250x200", class:"image"
+  .show-portfolio__technic
+    .show-portfolio__technic__title
+      使用技術
+    .show-portfolio__technic__content
+      #{@portfolio.tecnic}
+  .show-portfolio__detail
+    .show-portfolio__detail__title
+      説明
+    .show-portfolio__detail__content
+      #{@portfolio.detale}
