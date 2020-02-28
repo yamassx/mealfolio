@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     registrations: 'cooks/registrations'
   }
   resources :cooks, only: [:edit, :update, :index]
-  resources :portfolios, except: :show
+  resources :portfolios
 end
