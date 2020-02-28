@@ -1,13 +1,15 @@
-.show-portfolio.clearfix
-  .show-portfolio__image
-    =image_tag @portfolio.image1.url size: "250x200", class:"image"
-  .show-portfolio__technic
-    .show-portfolio__technic__title
-      使用技術
-    .show-portfolio__technic__content
-      #{@portfolio.tecnic}
-  .show-portfolio__detail
-    .show-portfolio__detail__title
-      説明
-    .show-portfolio__detail__content
-      #{@portfolio.detale}
+.portfolio-show-modal.modal.js-modal
+  .portfolio-show-modal__bg.modal__bg.js-modal-close
+  .portfolio-show-modal__show-portfolio.modal__content.clearfix
+    .portfolio-show-modal__show-portfolio__image
+      =image_tag @portfolio.image1.url size: "250x200", class:"image"
+    .portfolio-show-modal__show-portfolio__technic
+      .portfolio-show-modal__show-portfolio__technic__title
+        使用技術
+      .portfolio-show-modal__show-portfolio__technic__content
+        #{@portfolio.tecnic}
+    .portfolio-show-modal__show-portfolio__detail
+      .portfolio-show-modal__show-portfolio__detail__title
+        説明
+      .portfolio-show-modal__show-portfolio__detail__content
+        #{@portfolio.detale}

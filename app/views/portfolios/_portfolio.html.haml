@@ -8,7 +8,7 @@
       %ul
         %li 
           -# 詳細
-          =link_to "詳細", portfolio_path(portfolio.id), method: :get 
+          =link_to "詳細", portfolio_path(portfolio.id),class: "js-modal-open" method: :get 
         -if cook_signed_in? && portfolio.cook_id == current_cook.id
           %li
             =link_to "編集", edit_portfolio_path(portfolio.id), method: :get
