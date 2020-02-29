@@ -1,6 +1,7 @@
 class CooksController < ApplicationController
   def index
    @portfolios = Portfolio.all
+   @articles = Article.all
   end
 
   # def edit

@@ -1,0 +1,12 @@
+.new-article
+  .new-article__title
+    記事の投稿
+  .new-article__forms
+    = form_with(model: @article, local: true) do |form| 
+      = form.text_field :title, placeholder: "タイトル" ,class: "form"
+      %br
+      = form.file_field :image, placeholder: "画像",class: "file-form"
+      %br
+      = form.text_area :content, placeholder: "本文" , class: "text-form"
+      %br
+      = form.submit "SEND", class: "submit_btn"

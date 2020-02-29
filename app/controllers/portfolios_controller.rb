@@ -17,9 +17,8 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.new(portfolio_params)
     image_sizing(250, 200)
     if @portfolio.save
-      redirect_to cooks_path, notice: '投稿されました'
+      redirect_to cooks_path,
     else
-      flash.now[:alert] = '保存ができませんでした'
       render :index
     end
   end
