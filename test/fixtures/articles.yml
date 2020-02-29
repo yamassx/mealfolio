@@ -2,20 +2,12 @@
 
 one:
   title: MyString
-  string: MyString
-  content: MyString
-  text: MyString
+  content: MyText
   image: MyString
-  string: MyString
-  cook: MyString
-  references: MyString
+  cook: one
 
 two:
   title: MyString
-  string: MyString
-  content: MyString
-  text: MyString
+  content: MyText
   image: MyString
-  string: MyString
-  cook: MyString
-  references: MyString
+  cook: two
