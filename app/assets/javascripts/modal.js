@@ -11,15 +11,15 @@ $(function(){
       // モーダルコンテンツの表示位置を設定
       modalResize();
        // モーダルコンテンツフェードイン
-      $(modal).fadeIn('slow');
+      $(modal).fadeIn('normal');
 
       // 「.modal-overlay」あるいは「.modal-close」をクリック
       // $('.modal-overlay, .modal-close').off().click(function(){
         $('.modal-overlay').off().click(function(){
 
           // モーダルコンテンツとオーバーレイをフェードアウト
-          $(modal).fadeOut('slow');
-          $('.modal-overlay').fadeOut('slow',function(){
+          $(modal).fadeOut('normal');
+          $('.modal-overlay').fadeOut('normal',function(){
               // オーバーレイを削除
               $('.modal-overlay').remove();
           });
