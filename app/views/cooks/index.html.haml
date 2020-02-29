@@ -41,7 +41,7 @@
       - @portfolios.each do |portfolio|
         = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
     #cooks-top__contents__articles.panel
-      未実装
+      = render template: "articles/index"
     -if cook_signed_in?
       #cooks-top__contents__profile.panel
         =render template: 'cooks/show'
