@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   }
   resources :cooks, only: [:edit, :update, :index]
   resources :portfolios
+  resources :articles
 end

@@ -13,35 +13,28 @@
           =link_to new_portfolio_path do
             作品の投稿
         .cooks-top__middle-head__title__submit
-          -# =link_to new_portfolio_path 
-          記事の投稿
+          =link_to new_article_path do
+            記事の投稿
     .cooks-top__middle-head__tabs
       = link_to "#cooks-top__contents__portfolios", class:"tab" do
         .cooks-top__middle-head__tabs__pf.is-active
           .cooks-top__middle-head__tabs__pf__title
             works
-          -# .cooks-top__middle-head__tabs__pf__icon
-          -#   -# = link_to edit_cook_path(current_cook.id)
-          -#   %i.fas.fa-upload
       = link_to " #cooks-top__contents__articles", class:"tab" do
         .cooks-top__middle-head__tabs__ac
           .cooks-top__middle-head__tabs__ac__title
             articles
-          -# .cooks-top__middle-head__tabs__ac__icon
-          -#   %i.fas.fa-upload
       - if cook_signed_in?
         = link_to "#cooks-top__contents__profile", class:"tab" do
           .cooks-top__middle-head__tabs__prof
             .cooks-top__middle-head__tabs__prof__title
               profile
-            -# .cooks-top__middle-head__tabs__prof__icon
-            -#   %i.fa.fa-edit
   .cooks-top__contents.panel-group
     #cooks-top__contents__portfolios.panel.is-show
       - @portfolios.each do |portfolio|
         = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
     #cooks-top__contents__articles.panel
       = render template: "articles/index"
-    -if cook_signed_in?
+    -if cook_signed_in? 
       #cooks-top__contents__profile.panel
-        =render template: 'cooks/show'
+        = render template: 'cooks/show'
