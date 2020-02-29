@@ -1,10 +1,10 @@
 .article
   .article__image
-    -# = image_tag article.image.url, size: "80x80", class: "image"
+    = image_tag article.image.url, size: "80x80", class: "image"
   .article__content
     .article__content__title
       #{article.title}
     .article__content__text
-      #{article.content}
+      #{article.content.truncate(20)}
   .article__auther
     投稿者：#{article.cook.nickname}
