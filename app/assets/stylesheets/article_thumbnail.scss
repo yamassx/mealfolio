@@ -1,15 +1,25 @@
 .article {
   height: 100px;
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
   background-color: moccasin;
+  border: lightgray solid 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  position: relative;
   &__image {
     height: 80px;
     width: 80px;
+    background-color: orchid;
+    margin-top: 10px;
+    margin-left: 20px;
+    >image {
+      height: 80px;
+      width: 80px;
+    }
   }
   &__content {
+    margin-left: 30px;
     &__title {
       font-size: 24px;
       font-weight: bold;
@@ -21,5 +31,8 @@
   }
   &__auther {
     font-size: 16px;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
   }
 }

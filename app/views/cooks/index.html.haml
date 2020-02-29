@@ -34,7 +34,8 @@
       - @portfolios.each do |portfolio|
         = render partial: "portfolios/portfolio", locals: { portfolio: portfolio }
     #cooks-top__contents__articles.panel
-      = render template: "articles/index"
+      - @articles.each do |article|
+        = render partial: 'articles/article', locals: { article: article}
     -if cook_signed_in? 
       #cooks-top__contents__profile.panel
         = render template: 'cooks/show'
