@@ -17,7 +17,7 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.new(portfolio_params)
     image_sizing(250, 200)
     if @portfolio.save
-      redirect_to cooks_path,
+      redirect_to cooks_path
     else
       render :index
     end
