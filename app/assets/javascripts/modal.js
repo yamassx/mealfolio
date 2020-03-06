@@ -12,7 +12,8 @@ $(function(){
       //   var modal = $("#" + "$(portfolio.id)");
       //   var modal = $('modal-content');
       var target = $(this).data('target');
-      var modal = $(document).getElementById(target);
+    //   var modal = $(document).getElementById(target);
+      var modal = $('#' + target)[0];
       // モーダルコンテンツの表示位置を設定
       modalResize();
       // モーダルコンテンツフェードイン
