@@ -17,19 +17,19 @@
   .field
     = f.label :history
     %br/
-    = f.text_field :history, autofocus: true, autocomplete: "history"
+    = f.text_area :history, autofocus: true, autocomplete: "history", class: "text-form"
   .field
     = f.label :greeting
     %br/
-    = f.text_field :greeting, autofocus: true, autocomplete: "greeting"
+    = f.text_area :greeting, autofocus: true, autocomplete: "greeting", class: "text-form"
   .field
     = f.label :face
     %br/
     = f.file_field :face, autofocus: true, autocomplete: "face"
-  .field
-    = f.label :background
-    %br/
-    = f.file_field :background, autofocus: true, autocomplete: "background"
+  -# .field
+  -#   = f.label :background
+  -#   %br/
+  -#   = f.file_field :background, autofocus: true, autocomplete: "background"
   .field
     = f.label :email
     %br/
