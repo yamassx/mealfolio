@@ -1,7 +1,7 @@
 -# モーダル
 .portfolio-show-modal.modal.js-modal
   .portfolio-show-modal__bg.modal__bg.js-modal-close
-  .portfolio-show-modal__show-portfolio.clearfix.modal-content{:id => "#{portfolio.id}"}
+  .portfolio-show-modal__show-portfolio.clearfix.modal-content{id: "#{portfolio.id}"}
     .portfolio-show-modal__show-portfolio__image
       =image_tag portfolio.image1.url size: "250x200", class:"image"
     .portfolio-show-modal__show-portfolio__technic
@@ -24,7 +24,7 @@
     .cooks-top__contents__portfolios__thumbnail__footer__utility
       %ul
         %li 
-          =link_to "詳細",  "", class: "js-modal-open",  data: {:target => "#{portfolio.id}"}
+          =link_to "詳細",  "", class: "js-modal-open",  data: {target:  "#{portfolio.id}"}
           -# .portfolio-show-modal.modal.js-modal
           -#   .portfolio-show-modal__bg.modal__bg.js-modal-close
           -#   .portfolio-show-modal__show-portfolio.clearfix.modal-content{:id => "#{portfolio.id}"}
