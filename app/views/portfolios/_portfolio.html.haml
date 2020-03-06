@@ -8,7 +8,7 @@
       %ul
         %li 
           -# %input{name: "portfolio", type: "hidden", value: portfolio, class: 'current_portfolio' }/
-          =link_to "詳細",  "", class: "js-modal-open" 
+          =link_to "詳細",  "", class: "js-modal-open",  data: {:target => "#{portfolio.id}"}
           .portfolio-show-modal.modal.js-modal
             .portfolio-show-modal__bg.modal__bg.js-modal-close
             .portfolio-show-modal__show-portfolio.clearfix.modal-content{:id => "#{portfolio.id}"}
