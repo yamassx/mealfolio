@@ -8,7 +8,6 @@ $(function(){
       // オーバーレイをフェードイン
       $('.modal-overlay').fadeIn('slow');
       // モーダルコンテンツのIDを取得
-      //   var modal = $('#' + 'modal__content-' + variable);
       //   var modal = $("#" + "$(portfolio.id)");
       //   var modal = $('modal-content');
       var target = $(this).data('target');
