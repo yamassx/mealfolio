@@ -6,6 +6,8 @@
           #{current_cook.nickname}さん
           =link_to edit_cook_registration_path(current_cook.id) do
             %i.fas.fa-cog
+        -elsif restaurant_signed_in?
+          #{current_restaurant.name}様
         - else
           ゲストさん
       -if cook_signed_in?
@@ -15,6 +17,18 @@
         .cooks-top__middle-head__title__submit
           =link_to new_article_path do
             記事の投稿
+      -elsif restaurant_signed_in?
+        ！未実装！
+      -else
+        .cooks-top__middle-head__title__testsubmit
+          =form_for(:cook, url: cook_session_path) do |f|
+            -# =f.label "調理人テストログイン"
+            =f.hidden_field :email, value: "c@com"
+            =f.hidden_field :password, value: "itamae3"
+            =f.submit "調理人テストログイン",class: "cooks-top__middle-head__title__submit"
+        -# .cooks-top__middle-head__title__submit
+        -#   店舗テストログイン（未実装）
+
     .cooks-top__middle-head__tabs
       = link_to "#cooks-top__contents__portfolios", class:"tab" do
         .cooks-top__middle-head__tabs__pf.is-active
