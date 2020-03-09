@@ -20,11 +20,12 @@
       -elsif restaurant_signed_in?
         ！未実装！
       -else
-        .cooks-top__middle-head__title__submit
+        .cooks-top__middle-head__title__testsubmit
           =form_for(:cook, url: cook_session_path) do |f|
+            -# =f.label "調理人テストログイン"
             =f.hidden_field :email, value: "c@com"
             =f.hidden_field :password, value: "itamae3"
-            =f.submit "調理人テストログイン"
+            =f.submit "調理人テストログイン",class: "cooks-top__middle-head__title__submit"
         -# .cooks-top__middle-head__title__submit
         -#   店舗テストログイン（未実装）
 
